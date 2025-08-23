@@ -1,0 +1,56 @@
+---
+config:
+  layout: elk
+---
+classDiagram
+direction TB
+    class Planta {
+	    -int id
+	    -String ambienteIdeal
+	    -String categoria
+	    -String nomeCientifico
+	    -String nomePopular
+	    -String rega
+	    +Planta(int, String, String, String, String, String)
+	    +getId() int
+	    +getNomeCientifico() String
+	    +getNomePopular() String
+	    +getAmbienteIdeal() String
+	    +getRega() String
+	    +getCategoria() String
+	    +toString() String
+    }
+    class SistemaCadastro {
+	    -Scanner sc
+	    -int proximoId
+	    +main(String[]) void
+	    -cadastrarPlanta() void
+	    -listarTodas() void
+    }
+    class PersistenciaPlanta {
+	    -String PASTA
+	    +salvarPlanta(Planta) void
+	    +listarPlantas() List~Planta~
+    }
+    class Gson {
+	    +toJson(Object, Appendable) void
+	    +fromJson(Reader, Class) Object
+    }
+    class Scanner {
+	    +nextLine() String
+    }
+    class FileWriter {
+	    +FileWriter(String)
+    }
+
+	<<external>> Gson
+	<<external>> Scanner
+	<<external>> FileWriter
+
+    SistemaCadastro ..> Planta : "cria"
+    SistemaCadastro --> PersistenciaPlanta : "usa"
+    PersistenciaPlanta ..> Planta : "persiste/carrega"
+    PersistenciaPlanta --> "*" Planta : "gerencia"
+    PersistenciaPlanta ..> Gson : "usa"
+    PersistenciaPlanta ..> FileWriter : "usa"
+    SistemaCadastro ..> Scanner : "usa"
