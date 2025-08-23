@@ -1,3 +1,6 @@
+<<<<<<< HEAD
+# gus.tads.testes
+=======
 # Sistema de Cadastro de Plantas
 
 Sistema Java para cadastro e gerenciamento de plantas com persistência em arquivos JSON.
@@ -80,44 +83,3 @@ As plantas são salvas individualmente em arquivos JSON no diretório `dadosPlan
   "rega": "3x ao dia"
 }
 ```
-
-## 🔧 Dependências
-
-- **Gson 2.10.1**: Serialização/deserialização JSON
-- **JUnit 3.8.1**: Testes unitários (escopo test)
-
-## 📝 Funcionalidades
-
-### Menu Principal
-1. **Cadastrar nova planta**
-   - Coleta nome científico, nome popular, ambiente ideal, necessidade de rega e categoria
-   - Gera ID automático sequencial
-   - Salva em arquivo JSON individual
-
-2. **Listar todas as plantas**
-   - Carrega todos os arquivos JSON do diretório
-   - Exibe informações completas de cada planta
-
-3. **Sair**
-   - Encerra o programa
-
-## 🎯 Características Técnicas
-
-- **Padrão MVC**: Separação clara entre modelo, controle e persistência
-- **Serialização JSON**: Uso da biblioteca Gson para conversão de objetos
-- **Geração automática de IDs**: Controle sequencial de identificadores
-- **Tratamento de arquivos**: Criação automática de diretórios
-- **Interface simples**: Menu de linha de comando intuitivo
-
-## 📄 Licença
-
-Este projeto é desenvolvido para fins educacionais.
-
-## 👥 Contribuição
-
-Para contribuir com o projeto:
-1. Faça um fork do repositório
-2. Crie uma branch para sua feature
-3. Commit suas mudanças
-4. Push para a branch
-5. Abra um Pull Request
