@@ -1,6 +1,4 @@
-<<<<<<< HEAD
-# gus.tads.testes
-=======
+
 # Sistema de Cadastro de Plantas
 
 Sistema Java para cadastro e gerenciamento de plantas com persistência em arquivos JSON.
