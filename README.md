@@ -40,6 +40,11 @@ O sistema possui os seguintes casos de uso principais:
 
 ![Diagrama de Classes](docs/diagrama_classes.png)
 
+### Diagrama IDEF0
+
+![Diagrama IDEF0](docs/Diagrama_IDEF0.png)
+
+
 ## 🚀 Como Executar
 
 ### Pré-requisitos
